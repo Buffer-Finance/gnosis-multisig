@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useSafeAppsSDK } from "@safe-global/safe-apps-react-sdk";
-// import counterABI from './TestABis/counter.json'
+import counterABI from "./TestABis/counter.json";
 import messageABI from "./TestABis/message.json";
 import { ethers } from "ethers";
 
@@ -34,6 +34,16 @@ const SafeApp = () => {
     try {
       const { safeTxHash } = await sdk.txs.send({
         txs: [
+          {
+            to: "0x9ebC361a753Ab4e265fC77cD88940e3f39c5c67B",
+            value: "0",
+            data: generateTransactionData(
+              "0x9ebC361a753Ab4e265fC77cD88940e3f39c5c67B",
+              counterABI,
+              "update",
+              [0]
+            ),
+          },
           {
             to: "0x611D11d216B8cA76B3eab3A2f62D8706d8d1e865",
             value: "0",
