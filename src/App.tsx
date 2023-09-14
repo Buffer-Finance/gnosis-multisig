@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useSafeAppsSDK } from "@safe-global/safe-apps-react-sdk";
 import counterABI from "./TestABis/counter.json";
-// import messageABI from "./TestABis/message.json";
+import messageABI from "./TestABis/message.json";
 import { ethers } from "ethers";
 
 const SafeApp = () => {
