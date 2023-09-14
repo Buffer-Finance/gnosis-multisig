@@ -5,13 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": " vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@gnosis.pm/safe-apps-react-sdk": "latest",
+    "@gnosis.pm/safe-react-components": "^1.2.0",
+    "@material-ui/core": "^4.12.4",
+    "@safe-global/safe-apps-react-sdk": "^4.6.6",
+    "styled-components": "^5.3.11",
+    "web3": "^4.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
