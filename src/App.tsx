@@ -30,6 +30,7 @@ const SafeApp = () => {
 
       // Encode the function call with the provided parameters
     }
+    const random = Math.random().toFixed(3);
 
     try {
       const { safeTxHash } = await sdk.txs.send({
@@ -44,16 +45,16 @@ const SafeApp = () => {
               [5]
             ),
           },
-          // {
-          //   to: "0x611D11d216B8cA76B3eab3A2f62D8706d8d1e865",
-          //   value: "0",
-          //   data: generateTransactionData(
-          //     "0x611D11d216B8cA76B3eab3A2f62D8706d8d1e865",
-          //     messageABI,
-          //     "updateMessage",
-          //     ["Hey dddd"]
-          //   ),
-          // },
+          {
+            to: "0x611D11d216B8cA76B3eab3A2f62D8706d8d1e865",
+            value: "0",
+            data: generateTransactionData(
+              "0x611D11d216B8cA76B3eab3A2f62D8706d8d1e865",
+              messageABI,
+              "updateMessage",
+              ["Hey dddd" + random]
+            ),
+          },
         ],
       });
       console.log({ safeTxHash });
